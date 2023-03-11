@@ -12,7 +12,7 @@ interface ErrorFilter extends EntityNotFoundError {
   message: string;
 }
 
-export class EntityNotFoundExceptionFilter implements ExceptionFilter {
+export class HttpExceptionFilter implements ExceptionFilter {
   catch(exception: ErrorFilter, host: ArgumentsHost) {
     const ctx = host.switchToHttp();
     const res = ctx.getResponse<Response>();

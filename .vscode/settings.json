@@ -1,0 +1,80 @@
+
+{
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.tree.indent": 15,
+  "editor.tabSize": 2,
+  "editor.wordWrap": "on",
+  "typescript.updateImportsOnFileMove.enabled": "never",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "git.ignoreWindowsGit27Warning": true,
+  "editor.formatOnSave": true,
+  "[javascript]": {
+    "editor.formatOnSave": true
+  },
+  "[javascriptreact]": {
+    "editor.formatOnSave": true
+  },
+  "[typescript]": {
+    "editor.formatOnSave": true,
+    "source.fixAll.eslint": true,
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[typescriptreact]": {
+    "editor.formatOnSave": true,
+    "source.fixAll.eslint": true
+  },
+  "eslint.alwaysShowStatus": true,
+  "files.associations": {
+    "*.vue": "html"
+  },
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+  "material-icon-theme.files.associations": {
+    "*.controller.ts": "nest-controller",
+    "*.module.ts": "nest-module",
+    "*.service.ts": "nest-service",
+    "*.middleware.ts": "nest-middlware",
+    "*.filter.ts": "nest-filter",
+    "*.pipe.ts": "nest-pipe",
+    "*.gateway.ts": "nest-gateway",
+    "*.decorator.ts": "nest-decorator",
+    "*.guard.ts": "nest-guard",
+    "*.resolver.ts": "graphql",
+    "*.input.ts": "graphql"
+  },
+  "workbench.welcomePage.hiddenCategories": ["Setup", "Beginner"],
+  "terminal.integrated.tabs.enabled": true,
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "cSpell.language": "en,pt, pt_BR",
+  "i18n-ally.displayLanguage": "pt-BR",
+  "i18n-ally.readonly": true,
+  "i18n-ally.enabledParsers": ["js", "json"],
+  "jest.showCoverageOnLoad": true,
+  "workbench.editor.untitled.hint": "hidden",
+  "explorer.confirmDelete": false,
+  "editor.fontSize": 15,
+  "bracket-pair-colorizer-2.depreciation-notice": false,
+  "editor.bracketPairColorization.enabled": true,
+
+  "npm.exclude": [
+    "**/dist",
+    "**/dist/*",
+    "**/dist_electron",
+    "**/dist_electron/*"
+  ],
+  "workbench.colorTheme": "Dracula",
+  "workbench.editorAssociations": {
+    "*.class": "default"
+  },
+  "explorer.incrementalNaming": "smart",
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": true,
+  "window.zoomLevel": -1
+}

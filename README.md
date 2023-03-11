@@ -10,8 +10,9 @@ $ docker start mymongodb
 $ docker container ls
 
 $ nest g resource users
-$ npm i --save @nestjs/swagger swagger-ui-express
+$ npm i --save @nestjs/swagger swagger-ui-express --legacy-peer-deps
 $ npm i --save class-validator class-transformer
-$ npm i --save @nestjs/typeorm typeorm
+$ npm i --save @nestjs/typeorm typeorm @nestjs/mapped-types --legacy-peer-deps
+$ npm i --save @nestjs/config 
 
 mongodb://localhost:27018/test
