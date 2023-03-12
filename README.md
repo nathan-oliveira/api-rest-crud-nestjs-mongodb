@@ -16,3 +16,10 @@ $ npm i --save @nestjs/typeorm typeorm @nestjs/mapped-types --legacy-peer-deps
 $ npm i --save @nestjs/config 
 
 mongodb://localhost:27018/test
+
+######
+
+docker-compose up -d
+
+<!-- docker build -t api-nest:1.0.0 . -->
+<!-- docker run --detach --name= api-nest --publish 37017:27017 api-nest:1.0.0 -->

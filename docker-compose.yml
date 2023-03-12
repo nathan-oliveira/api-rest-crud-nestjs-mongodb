@@ -1,0 +1,32 @@
+version: '3'
+
+services:
+  api-app-nestjs:
+    build: .
+    command: yarn start
+    ports:
+      - '3000:3000'
+    volumes:
+      - .:/usr/app
+    depends_on:
+      - api-mongodb-nestjs
+
+  api-mongodb-nestjs:
+    container_name: api-mongodb-nestjs
+    image: mongo:latest
+    restart: always
+    volumes:
+      - .:/data/db
+    ports:
+      - '27017:27017'
+      - '28017:28017'
+    environment:
+      - AUTH=no
+  db:
+    container_name: 'database-mongodb-nestjs'
+    image: tutum/mongodb
+    ports:
+      - '27017:27017'
+      - '27018:27018'
+    environment:
+      - AUTH=no

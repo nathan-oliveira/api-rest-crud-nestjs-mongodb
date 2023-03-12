@@ -1,7 +1,8 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
-import { MongooseModule } from '@nestjs/mongoose';
+// import { MongooseModule } from '@nestjs/mongoose';
 
+import { DbModule } from './mongoose/mongoose.module';
 import { UsersModule } from './users/users.module';
 
 @Module({
@@ -9,10 +10,11 @@ import { UsersModule } from './users/users.module';
     ConfigModule.forRoot({
       envFilePath: ['.env'],
     }),
-    MongooseModule.forRoot('mongodb://localhost:27018/test'),
+    DbModule,
+    // MongooseModule.forRoot('mongodb://localhost:27018/test'),
     UsersModule,
   ],
   controllers: [],
   providers: [],
 })
-export class AppModule {}
+export class AppModule { }
