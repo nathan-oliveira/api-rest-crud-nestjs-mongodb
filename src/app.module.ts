@@ -11,7 +11,7 @@ import { UsersModule } from './users/users.module';
       envFilePath: ['.env'],
     }),
     DbModule,
-    // MongooseModule.forRoot('mongodb://localhost:27018/test'),
+    // MongooseModule.forRoot('mongodb://127.0.0.1:27017/test'),
     UsersModule,
   ],
   controllers: [],

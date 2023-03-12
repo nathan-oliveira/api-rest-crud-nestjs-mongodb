@@ -11,8 +11,8 @@ export class MongooseConfigService implements MongooseOptionsFactory {
   constructor(@Inject(REQUEST) private readonly request: Request) { }
 
   createMongooseOptions(): MongooseModuleOptions {
-    console.log(this.request.headers['aplication-request']);
-    const uri = 'mongodb://localhost:27018/test';
+    const dbName = this.request.headers['aplication-request'];
+    const uri = `mongodb://127.0.0.1:27017/${dbName}`;
     return {
       uri,
     };
