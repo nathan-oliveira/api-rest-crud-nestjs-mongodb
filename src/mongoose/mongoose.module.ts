@@ -9,4 +9,4 @@ import { MongooseConfigService } from './mongoose.service';
     }),
   ],
 })
-export class DbModule { }
+export class DbModule {}

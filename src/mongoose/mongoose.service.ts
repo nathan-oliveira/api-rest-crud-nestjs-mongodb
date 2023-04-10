@@ -11,8 +11,8 @@ export class MongooseConfigService implements MongooseOptionsFactory {
   constructor(@Inject(REQUEST) private readonly request: Request) { }
 
   createMongooseOptions(): MongooseModuleOptions {
-    const dbName = this.request.headers['aplication-request'];
-    const uri = `mongodb://127.0.0.1:27017/${dbName}`;
+    const dbName = this.request.headers['aplication-request'] || 'development';
+    const uri = `mongodb://root:example@localhost:27017/${dbName}?authSource=admin&readPreference=primary`;
     return {
       uri,
     };

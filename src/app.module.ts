@@ -10,8 +10,8 @@ import { UsersModule } from './users/users.module';
     ConfigModule.forRoot({
       envFilePath: ['.env'],
     }),
+    // MongooseModule.forRoot('mongodb://root:example@localhost:27017/test?authSource=admin&readPreference=primary'),
     DbModule,
-    // MongooseModule.forRoot('mongodb://127.0.0.1:27017/test'),
     UsersModule,
   ],
   controllers: [],

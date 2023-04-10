@@ -7,6 +7,11 @@ export class Cors {
       exposedHeaders: ['X-Total-Items'],
 
       origin: function (origin, callback) {
+        if (process.env.NODE_ENV === 'development') {
+          callback(null, true);
+          return;
+        }
+
         const whitelist = process.env.WHITELIST_CORS.split(',');
 
         if (whitelist.indexOf(origin) !== -1) {
