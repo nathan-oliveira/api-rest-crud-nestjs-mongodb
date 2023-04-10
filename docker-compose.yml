@@ -21,6 +21,9 @@ services:
       - MONGO_INITDB_ROOT_USERNAME=root
       - MONGO_INITDB_ROOT_PASSWORD=example
       # - MONGO_INITDB_DATABASE=test
+    volumes:
+      - mongodb:/data/db
+      - mongoconfig:/data/configdb
     networks:
       - mongo_net
 
@@ -32,28 +35,3 @@ volumes:
 networks:
   mongo_net:
     driver: bridge
-
-  # api-mongodb-nestjs:
-  #   container_name: 'api-mongodb-nestjs'
-  #   image: tutum/mongodb
-  #   ports:
-  #     - '27017:27017'
-  #     - '27018:27018'
-  #   environment:
-  #     - AUTH=no
-
-  # bugado
-  # api-mongodb-nestjs:
-  #   container_name: api-mongodb-nestjs
-  #   image: mongo:latest
-  #   restart: always
-  #   volumes:
-  #     - .:/data/db
-  #   ports:
-  #     - '27017:27017'
-  #     - '28017:28017'
-  #   environment:
-      # - AUTH=no
-
-
-  
